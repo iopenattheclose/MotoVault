@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motorcycle Brands</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MotoVault - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Select a Brand</h1>
-        <div class="logo-grid">
-            <a href="honda/honda.html" class="logo-link"> <img src="https://placehold.co/150x80/E4002B/white?text=Honda" alt="Honda Logo">
-                <span class="brand-name">Honda</span>
-            </a>
+  <header>
+    <h1>MotoVault</h1>
+    <p>Explore our top motorcycle brands</p>
+    <button id="theme-toggle">Toggle Theme</button>
+  </header>
 
-            <a href="yamaha/yamaha.html" class="logo-link">
-                <img src="https://placehold.co/150x80/0033A0/white?text=Yamaha" alt="Yamaha Logo">
-                <span class="brand-name">Yamaha</span>
-            </a>
+  <div id="dynamic-message"></div> <section class="brand-grid">
+    <a href="honda/honda.html" class="brand-card">
+        <img src="https://via.placeholder.com/200x120/E4032E/FFFFFF?text=Honda" alt="Honda Logo">
+        <span>Honda</span>
+    </a>
+    <a href="bmw/bmw.html" class="brand-card">
+        <img src="https://via.placeholder.com/200x120/0066B2/FFFFFF?text=BMW" alt="BMW Logo">
+        <span>BMW</span>
+    </a>
+    <a href="yamaha/yamaha.html" class="brand-card">
+        <img src="https://via.placeholder.com/200x120/0033A0/FFFFFF?text=Yamaha" alt="Yamaha Logo">
+        <span>Yamaha</span>
+    </a>
+    <a href="royal_enfield/royal_enfield.html" class="brand-card">
+        <img src="https://via.placeholder.com/200x120/212121/FFFFFF?text=Royal+Enfield" alt="Royal Enfield Logo">
+        <span>Royal Enfield</span>
+    </a>
+    <a href="triumph/triumph.html" class="brand-card">
+        <img src="https://via.placeholder.com/200x120/E6222C/FFFFFF?text=Triumph" alt="Triumph Logo">
+        <span>Triumph</span>
+    </a>
+    <a href="suzuki/suzuki.html" class="brand-card">
+        <img src="https://via.placeholder.com/200x120/0033A0/FFFFFF?text=Suzuki" alt="Suzuki Logo">
+        <span>Suzuki</span>
+    </a>
+    <a href="ktm/ktm.html" class="brand-card">
+        <img src="https://via.placeholder.com/200x120/FF6600/FFFFFF?text=KTM" alt="KTM Logo">
+        <span>KTM</span>
+    </a>
+  </section>
 
-            <a href="bmw/bmw.html" class="logo-link">
-                <img src="https://placehold.co/150x80/0066B2/white?text=BMW" alt="BMW Logo">
-                <span class="brand-name">BMW</span>
-            </a>
+  <div class="footer">
+    &copy; <span id="current-year"></span> MotoVault. All Rights Reserved.
+  </div>
 
-            <a href="royalenfield/royalenfield.html" class="logo-link">
-                 <img src="https://placehold.co/150x80/212121/white?text=Royal+Enfield" alt="Royal Enfield Logo">
-                 <span class="brand-name">Royal Enfield</span>
-            </a>
-
-            <a href="triumph/triumph.html" class="logo-link">
-                 <img src="https://placehold.co/150x80/E6222C/white?text=Triumph" alt="Triumph Logo">
-                 <span class="brand-name">Triumph</span>
-            </a>
-
-            <a href="suzuki/suzuki.html" class="logo-link">
-                 <img src="https://placehold.co/150x80/0033A0/white?text=Suzuki" alt="Suzuki Logo">
-                 <span class="brand-name">Suzuki</span>
-            </a>
-
-            <a href="ktm/ktm.html" class="logo-link">
-                 <img src="https://placehold.co/150x80/FF6600/white?text=KTM" alt="KTM Logo">
-                 <span class="brand-name">KTM</span>
-            </a>
-        </div>
-    </div>
-</body>
+  <script src="index.js"></script> </body>
 </html>
