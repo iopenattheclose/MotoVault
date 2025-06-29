@@ -1,0 +1,157 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e; /* Deep, dark background */
+    color: #e0e0e0; /* Light text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    background-color: #2a2a4a; /* Slightly lighter dark background for the container */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Deeper, more spread out shadow */
+    max-width: 1000px; /* Wider container */
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle light border */
+}
+
+h1 {
+    color: #e6e6fa; /* Lighter, more vibrant heading color */
+    margin-bottom: 50px; /* More space */
+    font-size: 3em; /* Larger heading */
+    font-weight: 700;
+    letter-spacing: 1.5px; /* Add some letter spacing */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Larger min-width for logos */
+    gap: 40px; /* Increased gap */
+    justify-items: center;
+    align-items: center;
+    padding: 20px 0; /* Vertical padding for the grid itself */
+}
+
+.logo-link {
+    display: flex;
+    flex-direction: column; /* Stack logo and potential text */
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #3a3a5a, #2a2a4a); /* Gradient background for depth */
+    padding: 25px;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother, more distinct transition */
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Finer border */
+    text-decoration: none;
+    color: #c0c0c0; /* Softer text color for link */
+    position: relative; /* For potential pseudo-elements or overlays */
+    overflow: hidden; /* Hide overflow for hover effects */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Initial shadow */
+}
+
+.logo-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.logo-link:hover::before {
+    opacity: 1;
+}
+
+.logo-link:hover {
+    transform: translateY(-12px) scale(1.03); /* More pronounced lift and scale */
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(100, 150, 250, 0.5); /* Stronger shadow with a subtle glow */
+    border-color: #8a2be2; /* Electric blue/purple border on hover */
+    background: linear-gradient(145deg, #4a3a6a, #3a2a5a); /* Slightly different gradient on hover */
+}
+
+.logo-link img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(0.7) brightness(0.9); /* More pronounced grayscale and dimming */
+    transition: filter 0.4s ease;
+    margin-bottom: 10px; /* Space between logo and potential text */
+}
+
+.logo-link:hover img {
+    filter: grayscale(0) brightness(1.1); /* Full color and slight brightening on hover */
+}
+
+/* Optional: Add brand names below logos */
+.logo-link span.brand-name {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #c0c0c0;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.logo-link:hover span.brand-name {
+    opacity: 1; /* Show on hover */
+    color: #e6e6fa; /* Lighter color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .container {
+        padding: 40px;
+    }
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 40px;
+    }
+    .logo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        border-radius: 10px;
+    }
+    h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .logo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 25px;
+    }
+    .logo-link {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    .logo-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        gap: 20px;
+    }
+}
